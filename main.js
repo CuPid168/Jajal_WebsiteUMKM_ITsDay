@@ -163,7 +163,33 @@ document.querySelectorAll('.social-item').forEach(item => {
   });
 });
 
-document.getElementById('navMenuBtn').onclick = function() {
-  document.getElementById('navLinks').classList.toggle('open');
-};
+// Mobile Navigation Toggle
+document.addEventListener('DOMContentLoaded', function() {
+  const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+  const navLinksMobile = document.getElementById('nav-links-mobile');
+  
+  if (mobileMenuBtn && navLinksMobile) {
+    mobileMenuBtn.addEventListener('click', function() {
+      mobileMenuBtn.classList.toggle('active');
+      navLinksMobile.classList.toggle('active');
+    });
+    
+    // Close menu when clicking on a link
+    navLinksMobile.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', function() {
+        mobileMenuBtn.classList.remove('active');
+        navLinksMobile.classList.remove('active');
+      });
+    });
+    
+    // Close menu when clicking outside
+    document.addEventListener('click', function(e) {
+      if (!mobileMenuBtn.contains(e.target) && !navLinksMobile.contains(e.target)) {
+        mobileMenuBtn.classList.remove('active');
+        navLinksMobile.classList.remove('active');
+      }
+    });
+  }
+});
+
 
