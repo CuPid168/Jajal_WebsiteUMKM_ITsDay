@@ -56,12 +56,13 @@ document.querySelectorAll('.cart-btn').forEach(btn => {
     }
     burst.innerHTML = '';
     burst.style.display = 'block';
-    for (let i = 0; i < 6; i++) {
+
+    for (let i = 0; i < 8; i++) {
       const love = document.createElement('span');
       love.className = 'love';
-      const angle = (i / 6) * 2 * Math.PI;
-      const tx = Math.cos(angle) * 180 + 'px'; 
-      const ty = Math.sin(angle) * 180 + 'px';
+      const angle = (i / 8) * 2 * Math.PI;
+      const tx = Math.cos(angle) * 300 + 'px'; 
+      const ty = Math.sin(angle) * 300 + 'px';
       love.style.setProperty('--tx', tx);
       love.style.setProperty('--ty', ty);
       burst.appendChild(love);
@@ -74,8 +75,95 @@ document.querySelectorAll('.cart-btn').forEach(btn => {
   });
 });
 
+function typeWriter(element, text, speed = 30, callback) {
+  let i = 0;
+  function typing() {
+    if (i <= text.length) {
+      element.innerHTML = text.slice(0, i) + '<span class="type-cursor">|</span>';
+      i++;
+      setTimeout(typing, speed);
+    } else {
+      element.innerHTML = text;
+      if (callback) callback();
+    }
+  }
+  typing();
+}
 
+const titleText = 'Dari Tangan <span class="hero-color">Terampil</span><br />Lahir Karya Penuh <span class="hero-color">Cerita</span>';
+const descText = 'Temukan nilai tradisi dalam setiap produk kerajinan <br />kami, hasil karya pengrajin lokal yang menjaga warisan<br />budaya lewat sentuhan tangan.';
 
+window.addEventListener('DOMContentLoaded', () => {
+  const titleEl = document.getElementById('typewriter-title');
+  const descEl = document.getElementById('typewriter-desc');
+  const logoEl = document.getElementById('banner-logo');
+  const shopBtn = document.getElementById('shop-btn');
+  typeWriter(titleEl, titleText, 30, () => {
+    setTimeout(() => {
+      typeWriter(descEl, descText, 18, () => {
+        if (logoEl) {
+          logoEl.style.display = '';
+          setTimeout(() => logoEl.classList.add('show'), 10);
+        }
+        if (shopBtn) {
+          shopBtn.style.display = '';
+          setTimeout(() => shopBtn.classList.add('show'), 10);
+        }
+      });
+    }, 300);
+  });
+});
 
+document.addEventListener('DOMContentLoaded', function() {
+  const resellerBtn = document.querySelector('.reseller-btn');
+  if (resellerBtn) {
+    resellerBtn.addEventListener('click', function(e) {
+      e.preventDefault();
+      window.open('https://t.me/+unQsOyE6mjc4OGRl', '_blank');
+    });
+  }
+});
 
+document.addEventListener('DOMContentLoaded', function() {
+  const waBtn = document.getElementById('whatsapp-btn');
+  if (waBtn) {
+    waBtn.addEventListener('click', function(e) {
+      e.preventDefault();
+      window.open(
+        'https://api.whatsapp.com/send?phone=6282219145422&text=Saya%20ingin%20custom%20rajut',
+        '_blank'
+      );
+    });
+  }
+});
+
+document.addEventListener('DOMContentLoaded', function() {
+  const images = [
+    'assets/testimoni1.png',
+    'assets/testimoni2.png',
+    'assets/testimoni3.png'
+  ];
+  let idx = 0;
+  const img = document.getElementById('testimonial-img');
+
+  setInterval(() => {
+    img.classList.remove('slide'); 
+    idx = (idx + 1) % images.length;
+    img.src = images[idx];
+    void img.offsetWidth; 
+    img.classList.add('slide'); 
+  }, 5000);
+});
+
+document.querySelectorAll('.social-item').forEach(item => {
+  item.style.cursor = 'pointer';
+  item.addEventListener('click', function () {
+    const link = item.getAttribute('data-link');
+    if (link) window.open(link, '_blank');
+  });
+});
+
+document.getElementById('navMenuBtn').onclick = function() {
+  document.getElementById('navLinks').classList.toggle('open');
+};
 
