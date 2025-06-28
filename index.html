@@ -11,7 +11,7 @@
       <section class="banner-bg">
         <div class="nav_header">
           <div class="nav_logo">
-            <a href=""
+            <a href="#"
               ><img src="assets/logo.png" alt="Logo Kampoeng Radjoet"
             /></a>
           </div>
@@ -32,11 +32,197 @@
               kami, hasil karya pengrajin lokal yang menjaga warisan
               <br />budaya lewat sentuhan tangan.
             </p>
-            <a href="" class="btn">Belanja Sekarang</a>
+            <button type="button" class="btn shop-btn">
+              Belanja Sekarang
+              <img
+                src="assets/icons/cart.svg"
+                alt="Icon Cart"
+                class="btn-icon"
+              />
+            </button>
           </div>
           <div class="banner-image">
             <img src="assets/logo2.svg" alt="Logo ke 2" />
           </div>
+        </div>
+      </section>
+      <section class="highlight-section">
+        <div class="highlight-container">
+          <div class="highlight-image">
+            <img src="assets/hand.png" alt="Rajutan Tangan" />
+          </div>
+          <div class="highlight-wrapper">
+            <div class="highlight-row top-row">
+              <h2 class="highlight-heading with-underline">WISATA NO 1</h2>
+              <p class="highlight-desc">
+                Dari karya lokal hingga pengalaman edukatif ada di Kampoeng
+                Radjoet.
+              </p>
+            </div>
+            <h2 class="highlight-heading large">BANDUNG PUNYA CERITA</h2>
+            <div class="highlight-row bottom-row">
+              <p class="highlight-subtext">
+                Merajut Warisan,<br />Membangun Masa Depan
+              </p>
+              <h2 class="highlight-heading with-underline">DALAM RAJUTAN</h2>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="location-section">
+        <div class="location-container">
+          <div class="location-map">
+            <img src="assets/map.png" alt="Peta Kampoeng Radjoet" />
+          </div>
+          <div class="location-content">
+            <h2 class="location-title">
+              <span class="bold">Benang–Benang Inspirasi</span><br />
+              Berawal <span class="font-400">dari</span>
+              <span class="with-underline yellow-underline">Binong Jati</span>
+            </h2>
+            <p class="location-desc">
+              Di sudut hangat Kota Bandung, berdiri Kampoeng Radjoet sentra UMKM
+              yang mengubah benang menjadi karya bernilai tinggi. Kampoeng
+              Radjoet telah menjadi rumah bagi para pengrajin lokal yang
+              menghadirkan produk rajutan berkualitas.
+            </p>
+            <div class="btn location-btn">
+              Lihat Lokasi Kami
+              <img
+                src="assets/icons/location.svg"
+                alt="Map Icon"
+                class="btn-icon"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="packets-section">
+        <h2 class="packet-title">Pilihan Paket Wisata Rajut</h2>
+        <p class="packet-desc">
+          Di sinilah benang berubah menjadi karya, dan wisata berubah jadi
+          pengalaman berkesan. Pilih dari berbagai paket:
+          <br />
+          belanja, belajar, hingga tinggal bersama warga.
+        </p>
+        <div class="packet-underline"></div>
+        <div class="packet-cards">
+          <div class="packet-card" onclick="selectCard(this)">
+            <img
+              src="assets/packet1.png"
+              alt="Shopping Village"
+              class="packet-img"
+            />
+            <h3 class="packet-name">Shopping Village</h3>
+            <p class="packet-desc-small">
+              Belanja produk rajutan langsung dari pengrajin lokal.
+            </p>
+            <p class="packet-price">Rp 49.000 <span>/orang</span></p>
+            <ul class="packet-features">
+              <li>Guide</li>
+              <li>Merchandise</li>
+              <li>Welcome drink</li>
+            </ul>
+            <button class="packet-btn">Pilih paket ini</button>
+          </div>
+
+          <div class="packet-card" onclick="selectCard(this)">
+            <img
+              src="assets/sekolahRajut.png"
+              alt="Sekolah Rajut"
+              class="packet-img"
+            />
+            <h3 class="packet-name">Sekolah Rajut</h3>
+            <p class="packet-desc-small">
+              Belajar merajut dan nikmati atraksi budaya.
+            </p>
+            <p class="packet-price">Rp 249.000 <span>/orang</span></p>
+            <ul class="packet-features">
+              <li>Guide</li>
+              <li>Makan siang</li>
+              <li>Merchandise</li>
+              <li>Workshop rajut</li>
+              <li>Atraksi budaya</li>
+            </ul>
+            <button class="packet-btn">Pilih paket ini</button>
+          </div>
+
+          <div class="packet-card" onclick="selectCard(this)">
+            <img src="assets/merasa.png" alt="Merasa" class="packet-img" />
+            <h3 class="packet-name">Merasa</h3>
+            <p class="packet-desc-small">
+              Wisata merajut inklusif untuk semua kalangan.
+            </p>
+            <p class="packet-price">Rp 74.000 <span>/orang</span></p>
+            <ul class="packet-features">
+              <li>Mental health & disabilitas</li>
+              <li>Guide</li>
+              <li>Workshop</li>
+              <li>Snakbox</li>
+              <li>Merchandise</li>
+            </ul>
+            <button class="packet-btn">Pilih paket ini</button>
+          </div>
+
+          <div class="packet-card" onclick="selectCard(this)">
+            <img src="assets/merakit1.png" alt="Merakit 1" class="packet-img" />
+            <h3 class="packet-name">Merakit 1</h3>
+            <p class="packet-desc-small">
+              Belajar teknik dasar merajut dengan bimbingan langsung.
+            </p>
+            <p class="packet-price">Rp 99.000 <span>/orang</span></p>
+            <ul class="packet-features">
+              <li>Guide</li>
+              <li>Workshop rajut</li>
+
+              <li>Nasi Box</li>
+              <li>Merchandise</li>
+            </ul>
+            <a href=""></a>
+            <button class="packet-btn">Pilih paket ini</button>
+          </div>
+
+          <div class="packet-card" onclick="selectCard(this)">
+            <img src="assets/livein.png" alt="Live In" class="packet-img" />
+            <h3 class="packet-name">Live In</h3>
+            <p class="packet-desc-small">
+              Tinggal bersama warga, belajar merajut & budaya lokal.
+            </p>
+            <p class="packet-price">Rp 599.000 <span>/orang</span></p>
+            <ul class="packet-features">
+              <li>2 atraksi budaya</li>
+              <li>Workshop rajut</li>
+              <li>Merchandise</li>
+              <li>3 Kali Makan / Hari</li>
+              <li>Homestay (3 hari 2 malam)</li>
+            </ul>
+            <button class="packet-btn">Pilih paket ini</button>
+          </div>
+
+          <div class="packet-card" onclick="selectCard(this)">
+            <img src="assets/merakit2.png" alt="Merakit 2" class="packet-img" />
+            <h3 class="packet-name">Merakit 2</h3>
+            <p class="packet-desc-small">
+              Pelajari teknik merajut tingkat lanjut.
+            </p>
+            <p class="packet-price">Rp 149.000 <span>/orang</span></p>
+            <ul class="packet-features">
+              <li>Guide</li>
+              <li>Merchandise</li>
+              <li>Makan siang</li>
+              <li>Workshop rajut</li>
+            </ul>
+            <button class="packet-btn">Pilih paket ini</button>
+          </div>
+        </div>
+      </section>
+      <section class="product-section">
+        <div>
+          <h2 class="product-title">Produk Terbaru dari Kampoeng Radjoet</h2>
+          <p class="product-desc">
+            Temukan produk rajutan berkualitas tinggi yang dibuat dengan penuh
+            cinta oleh pengrajin lokal kami.
+          </p>
         </div>
       </section>
     </main>
