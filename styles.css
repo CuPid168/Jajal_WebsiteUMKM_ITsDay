@@ -224,6 +224,7 @@ h1{
   color: #555;
   font-size: 1rem;
   line-height: 1.7;
+  margin-bottom: 44px; 
 }
 
 .location-btn {
@@ -236,6 +237,7 @@ h1{
   border-radius: 6px;
   text-decoration: none;
   width: fit-content;
+  margin-top: 0;
 }
 
 /* Packet Section */
