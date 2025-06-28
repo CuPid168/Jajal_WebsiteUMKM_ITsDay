@@ -1,6 +1,11 @@
 function selectCard(card) {
   const cards = document.querySelectorAll('.packet-card');
-  cards.forEach(c => c.classList.remove('selected'));
+  cards.forEach(c => {
+    c.classList.remove('selected');
+    c.style.animation = 'none';
+    void c.offsetWidth;
+    c.style.animation = '';
+  });
   card.classList.add('selected');
 }
 
@@ -33,6 +38,42 @@ document.querySelectorAll('.shop-btn').forEach(btn => {
     );
   });
 });
+
+function animateCard(card) {
+  card.style.transform = 'scale(1.05) rotateX(2deg)';
+  setTimeout(() => {
+    card.style.transform = '';
+  }, 300);
+}
+
+document.querySelectorAll('.cart-btn').forEach(btn => {
+  btn.addEventListener('click', function(e) {
+    let burst = btn.querySelector('.love-burst');
+    if (!burst) {
+      burst = document.createElement('span');
+      burst.className = 'love-burst';
+      btn.appendChild(burst);
+    }
+    burst.innerHTML = '';
+    burst.style.display = 'block';
+    for (let i = 0; i < 6; i++) {
+      const love = document.createElement('span');
+      love.className = 'love';
+      const angle = (i / 6) * 2 * Math.PI;
+      const tx = Math.cos(angle) * 180 + 'px'; 
+      const ty = Math.sin(angle) * 180 + 'px';
+      love.style.setProperty('--tx', tx);
+      love.style.setProperty('--ty', ty);
+      burst.appendChild(love);
+    }
+
+    setTimeout(() => {
+      burst.style.display = 'none';
+      burst.innerHTML = '';
+    }, 900);
+  });
+});
+
 
 
 

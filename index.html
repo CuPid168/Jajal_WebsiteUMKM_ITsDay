@@ -16,9 +16,10 @@
             /></a>
           </div>
           <ul class="nav_links">
-            <li><a href="">Beranda</a></li>
-            <li><a href="">Produk</a></li>
-            <li><a href="">Tentang Kami</a></li>
+            <li><a href="#">Beranda</a></li>
+            <li><a href="#wisata">Paket Wisata</a></li>
+            <li><a href="#product">Produk</a></li>
+            <li><a href="">Testimoni</a></li>
           </ul>
         </div>
         <div class="banner-content">
@@ -97,7 +98,7 @@
           </div>
         </div>
       </section>
-      <section class="packets-section">
+      <section class="packets-section" id="wisata">
         <h2 class="packet-title">Pilihan Paket Wisata Rajut</h2>
         <p class="packet-desc">
           Di sinilah benang berubah menjadi karya, dan wisata berubah jadi
@@ -107,7 +108,7 @@
         </p>
         <div class="packet-underline"></div>
         <div class="packet-cards">
-          <div class="packet-card" onclick="selectCard(this)">
+          <div class="packet-card shopping-village" onclick="selectCard(this)">
             <img
               src="assets/packet1.png"
               alt="Shopping Village"
@@ -126,7 +127,7 @@
             <button class="packet-btn">Pilih paket ini</button>
           </div>
 
-          <div class="packet-card" onclick="selectCard(this)">
+          <div class="packet-card sekolah-rajut" onclick="selectCard(this)">
             <img
               src="assets/sekolahRajut.png"
               alt="Sekolah Rajut"
@@ -147,7 +148,7 @@
             <button class="packet-btn">Pilih paket ini</button>
           </div>
 
-          <div class="packet-card" onclick="selectCard(this)">
+          <div class="packet-card merasa" onclick="selectCard(this)">
             <img src="assets/merasa.png" alt="Merasa" class="packet-img" />
             <h3 class="packet-name">Merasa</h3>
             <p class="packet-desc-small">
@@ -164,7 +165,7 @@
             <button class="packet-btn">Pilih paket ini</button>
           </div>
 
-          <div class="packet-card" onclick="selectCard(this)">
+          <div class="packet-card merakit-1" onclick="selectCard(this)">
             <img src="assets/merakit1.png" alt="Merakit 1" class="packet-img" />
             <h3 class="packet-name">Merakit 1</h3>
             <p class="packet-desc-small">
@@ -182,7 +183,7 @@
             <button class="packet-btn">Pilih paket ini</button>
           </div>
 
-          <div class="packet-card" onclick="selectCard(this)">
+          <div class="packet-card live-in" onclick="selectCard(this)">
             <img src="assets/livein.png" alt="Live In" class="packet-img" />
             <h3 class="packet-name">Live In</h3>
             <p class="packet-desc-small">
@@ -199,7 +200,7 @@
             <button class="packet-btn">Pilih paket ini</button>
           </div>
 
-          <div class="packet-card" onclick="selectCard(this)">
+          <div class="packet-card merakit-2" onclick="selectCard(this)">
             <img src="assets/merakit2.png" alt="Merakit 2" class="packet-img" />
             <h3 class="packet-name">Merakit 2</h3>
             <p class="packet-desc-small">
@@ -216,13 +217,141 @@
           </div>
         </div>
       </section>
-      <section class="product-section">
-        <div>
-          <h2 class="product-title">Produk Terbaru dari Kampoeng Radjoet</h2>
-          <p class="product-desc">
-            Temukan produk rajutan berkualitas tinggi yang dibuat dengan penuh
-            cinta oleh pengrajin lokal kami.
-          </p>
+      <section class="product-section" id="product">
+        <h2 class="product-title">Produk Terbaru dari Kampoeng Radjoet</h2>
+        <div class="product-cards">
+          <!-- 1. Cardigan Rajut Bunga Vintage -->
+          <div class="product-card" onmouseenter="animateCard(this)">
+            <div class="product-image-container">
+              <img
+                src="assets/cardigan.png"
+                alt="Cardigan Rajut"
+                class="product-img"
+              />
+              <span class="rating"
+                ><img src="assets/icons/star.svg" alt="star" />4.8</span
+              >
+            </div>
+            <h3 class="product-name">Cardigan Rajut Bunga Vintage</h3>
+            <p class="product-category">Pakaian</p>
+            <div class="product-bottom">
+              <p class="product-price">Rp 250.000</p>
+              <button class="cart-btn">
+                <img src="assets/icons/love.svg" alt="Cart Icon" />
+              </button>
+            </div>
+          </div>
+
+          <!-- 2. Tote Bag Rajut Daisy Kuning -->
+          <div class="product-card" onmouseenter="animateCard(this)">
+            <div class="product-image-container">
+              <img
+                src="assets/toteBag.png"
+                alt="Tote Bag Rajut Daisy Kuning"
+                class="product-img"
+              />
+              <span class="rating"
+                ><img src="assets/icons/star.svg" alt="star" />4.9</span
+              >
+            </div>
+            <h3 class="product-name">Tote Bag Rajut Daisy Kuning</h3>
+            <p class="product-category">Aksesoris</p>
+            <div class="product-bottom">
+              <p class="product-price">Rp 180.000</p>
+              <button class="cart-btn">
+                <img src="assets/icons/love.svg" alt="Cart Icon" />
+              </button>
+            </div>
+          </div>
+
+          <!-- 3. Alas Meja Oval Rajut Natural -->
+          <div class="product-card" onmouseenter="animateCard(this)">
+            <div class="product-image-container">
+              <img
+                src="assets/alasMeja.png"
+                alt="Alas Meja Oval Rajut"
+                class="product-img"
+              />
+              <span class="rating"
+                ><img src="assets/icons/star.svg" alt="star" />5.0</span
+              >
+            </div>
+            <h3 class="product-name">Alas Meja Oval Rajut Natural</h3>
+            <p class="product-category">Dekorasi</p>
+            <div class="product-bottom">
+              <p class="product-price">Rp 95.000</p>
+              <button class="cart-btn">
+                <img src="assets/icons/love.svg" alt="Cart Icon" />
+              </button>
+            </div>
+          </div>
+
+          <!-- 4. Coaster Bunga Rajut Handmade -->
+          <div class="product-card" onmouseenter="animateCard(this)">
+            <div class="product-image-container">
+              <img
+                src="assets/coasterBag.png"
+                alt="Coaster Rajut Handmade"
+                class="product-img"
+              />
+              <span class="rating"
+                ><img src="assets/icons/star.svg" alt="star" />4.9</span
+              >
+            </div>
+            <h3 class="product-name">Coaster Bunga Rajut Handmade</h3>
+            <p class="product-category">Dekorasi</p>
+            <div class="product-bottom">
+              <p class="product-price">Rp 35.000</p>
+              <button class="cart-btn">
+                <img src="assets/icons/love.svg" alt="Cart Icon" />
+                <span class="love-burst"></span>
+              </button>
+            </div>
+          </div>
+
+          <!-- 5. Rompi Rajut Pola Tulip -->
+          <div class="product-card" onmouseenter="animateCard(this)">
+            <div class="product-image-container">
+              <img
+                src="assets/rompiRajut.png"
+                alt="Rompi Rajut"
+                class="product-img"
+              />
+              <span class="rating"
+                ><img src="assets/icons/star.svg" alt="star" />5.0</span
+              >
+            </div>
+            <h3 class="product-name">Rompi Rajut Pola Tulip</h3>
+            <p class="product-category">Pakaian</p>
+            <div class="product-bottom">
+              <p class="product-price">Rp 225.000</p>
+              <button class="cart-btn">
+                <img src="assets/icons/love.svg" alt="Cart Icon" />
+              </button>
+            </div>
+          </div>
+
+          <!-- 6. Boneka Rajut Bunny Amigurumi -->
+          <div class="product-card" onmouseenter="animateCard(this)">
+            <div class="product-image-container">
+              <img
+                src="assets/bonekaRajut.png"
+                alt="Boneka Rajut Bunny Amigurumi"
+                class="product-img"
+              />
+              <span class="rating"
+                ><img src="assets/icons/star.svg" alt="star" />4.8</span
+              >
+            </div>
+            <h3 class="product-name">Boneka Rajut Bunny Amigurumi</h3>
+            <p class="product-category">Mainan</p>
+            <div class="product-bottom">
+              <p class="product-price">Rp 120.000</p>
+              <button class="cart-btn">
+                <img src="assets/icons/love.svg" alt="Cart Icon" />
+              </button>
+            </div>
+          </div>
         </div>
       </section>
     </main>
